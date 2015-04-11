@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Web Dev match</title>
+  <title> Dev match</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -17,7 +17,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-          <%= link_to 'SaaS', root_path, class: 'navbar -brand' %>
+        <%= link_to  root_path, class: 'navbar -brand' do %>
+        <i class= "fa fa-users"></i> 
+          Dev Match
+        <% end  %>
        </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -27,8 +30,9 @@
       </div><!-- /.navbar-collapse -->
   </div>
   </nav>
-
-<%= yield %>
-
+<div class ="container">
+  <%= yield %>
+</div>
+  
 </body>
 </html>
